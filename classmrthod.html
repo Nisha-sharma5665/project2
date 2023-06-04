@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>class method</title>
+    </head>
+    <body>
+        <h1>class method</h1>
+      <p id="p1" ></p> 
+       
+        <script>
+    function Person(){
+        this.firstName="unknown"                      //java class
+        this.lastName="unknown"
+        this.getFullName=function(){//THIS IS A METHOD
+            return this.firstName+""+this.lastName
+        }
+    }
+    var person1=new Person()
+    person1.firstName="nisha"                        //java object(it can be N numbers of objects)
+    person1.lastName="sharma"
+    alert(person1.getFullName())
+
+    var person2=new Person()
+    person2.firstName="ram"                        //java object(it can be N numbers of objects)
+    person2.lastName="sharma"
+    alert(person2.getFullName())
+
+    var person3=new Person()
+    person3.firstName="shyam"
+    person3.lastName="sharma"
+    alert(person3.getFullName())
+        </script>
+        
+
+    </body>
+</html>

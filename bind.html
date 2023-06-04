@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>bind</title>
+    </head>
+    <body>
+        <h1>bind</h1>
+    
+       
+        <script>
+ var myvar=100;//global variable
+ function somefunction(callback){
+    var myvar=200//local variable
+  callback()
+ }
+ var obj={
+    myvar:300,
+    whoisthis:function(){
+        alert("this.referece two"+this+",myvar"+this.myvar)
+    }
+ }
+ 
+ somefunction(obj.whoisthis)
+ somefunction(obj.whoisthis.bind(obj))
+        </script>
+        
+
+    </body>
+</html>

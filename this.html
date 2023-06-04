@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>this method</title>
+    </head>
+    <body>
+        <h1>this method</h1>
+      <p id="p1" ></p> 
+       
+        <script>
+ var myvar=100;//global variable
+ function whoisthis(){
+    var myvar=200//local variable
+    alert(myvar)//200
+    alert(this.myvar)//100
+ }
+ whoisthis()
+
+ var obj=new whoisthis()
+ obj.myvar=300//inside method
+
+ alert(obj.myvar)
+        </script>
+        
+
+    </body>
+</html>
